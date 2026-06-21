@@ -6,8 +6,8 @@ from langgraph.graph import StateGraph, END
 from typing_extensions import TypedDict, Annotated
 import operator
 
-OFFDATA_KEY = "rsgdRTKp1S53Nc0S"
-OPENROUTER_KEY = "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"
+OFFDATA_KEY = ""
+OPENROUTER_KEY = ""
 
 model = ChatOpenAI(model="qwen/qwen3-235b-a22b-2507", temperature=0.1, api_key=OPENROUTER_KEY,
                    base_url="https://openrouter.ai/api/v1")
