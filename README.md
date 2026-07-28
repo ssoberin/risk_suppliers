@@ -12,7 +12,7 @@ Manual verification of company requisites and sanctions checks is time-consuming
 ## Key Features (DS & MLE Highlights)
 
 - **Hybrid NLP Pipeline:** Combines deterministic Regex parsing for 100% accurate entity extraction (INN, OGRN, OKPO) with LLM reasoning. This eliminates hallucinations, filters OCR artifacts, and significantly reduces token consumption and latency.
-- **Custom Risk Scoring Engine:** Developed a multi-factor, weighted risk assessment algorithm. It evaluates direct sanctions, foreign founders, management reliability, and restricted data access to output a clear compliance recommendation (🟢 Safe to 🟴 Block).
+- **Custom Risk Scoring Engine:** Developed a multi-factor, weighted risk assessment algorithm. It evaluates direct sanctions, foreign founders, management reliability, and restricted data access to output a clear compliance recommendation (Safe to Block).
 - **Agentic Orchestration (LangGraph):** Utilizes a stateful `StateGraph` architecture with conditional routing. The agent seamlessly switches between conversational reasoning (`agent_node`) and deterministic tool execution (`tool_node`).
 - **Intelligent Discrepancy Resolution:** If user-provided requisites conflict with official registry data (e.g., mismatched INN/KPP), the agent proactively pauses, presents the discrepancies, and prompts the user to select the correct data source before proceeding.
 - **Robust API Integration:** Features fallback logic, timeout handling, and structured JSON parsing when querying external corporate data providers (Ofdata API).
@@ -28,14 +28,14 @@ The system follows an **Orchestrator + Tools** pattern:
    - Runs the custom `sanctions_risk_check` algorithm.
    - Formats a structured, human-readable compliance report.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Languages:** Python 3.10+
 - **AI & Orchestration:** LangGraph, LangChain, OpenRouter API (Qwen models)
 - **Data Processing:** Regex, JSON, Requests
 - **Concepts:** Named Entity Recognition (NER), Stateful Multi-turn Conversations, Rule-based Risk Scoring, Prompt Engineering
 
-## ⚙️ How to Run
+## How to Run
 
 1. **Clone the repository:**
 ```bash
@@ -58,7 +58,7 @@ python main.py
 ```
 *Try inputting: "Проверь компанию с ИНН 7736050003"*
 
-## 📈 Future Improvements
+## Future Improvements
 Integrate asynchronous API calls (aiohttp) for concurrent multi-company checks.
 Add a vector database (RAG) to cross-reference extracted requisites with unstructured PDF contracts.
 Deploy as a FastAPI microservice with a Swagger UI for seamless frontend integration.
