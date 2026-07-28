@@ -1,4 +1,4 @@
-# 🏢 EGRUL AI Auditor & Risk Assessment Agent
+# EGRUL AI Auditor & Risk Assessment Agent
 
 An intelligent, stateful AI agent designed to automate the validation of Russian corporate requisites (EGRUL) and assess geopolitical/compliance risks. Built with a hybrid approach, combining deterministic NLP for accuracy with LLM reasoning for flexible user interaction.
 
@@ -6,10 +6,10 @@ An intelligent, stateful AI agent designed to automate the validation of Russian
 Model that agent is based on: qwen/qwen3-235b-a22b-2507
 AI-Powered Corporate Due Diligence & Sanctions Screening Agent*
 
-## 🎯 Business Value
+## Business Value
 Manual verification of company requisites and sanctions checks is time-consuming and prone to human error. This agent reduces verification time to seconds, automatically detects data discrepancies, and provides a transparent, weighted risk score for compliance (152-FZ).
 
-## 🚀 Key Features (DS & MLE Highlights)
+## Key Features (DS & MLE Highlights)
 
 - **Hybrid NLP Pipeline:** Combines deterministic Regex parsing for 100% accurate entity extraction (INN, OGRN, OKPO) with LLM reasoning. This eliminates hallucinations, filters OCR artifacts, and significantly reduces token consumption and latency.
 - **Custom Risk Scoring Engine:** Developed a multi-factor, weighted risk assessment algorithm. It evaluates direct sanctions, foreign founders, management reliability, and restricted data access to output a clear compliance recommendation (🟢 Safe to 🟴 Block).
@@ -17,7 +17,7 @@ Manual verification of company requisites and sanctions checks is time-consuming
 - **Intelligent Discrepancy Resolution:** If user-provided requisites conflict with official registry data (e.g., mismatched INN/KPP), the agent proactively pauses, presents the discrepancies, and prompts the user to select the correct data source before proceeding.
 - **Robust API Integration:** Features fallback logic, timeout handling, and structured JSON parsing when querying external corporate data providers (Ofdata API).
 
-## 🏗 Architecture
+## Architecture
 
 The system follows an **Orchestrator + Tools** pattern:
 1. **Agent Node:** Processes user input using a lightweight LLM (via OpenRouter) guided by a strict system prompt.
@@ -63,5 +63,5 @@ Integrate asynchronous API calls (aiohttp) for concurrent multi-company checks.
 Add a vector database (RAG) to cross-reference extracted requisites with unstructured PDF contracts.
 Deploy as a FastAPI microservice with a Swagger UI for seamless frontend integration.
 
-*Author: Samira Khamidullova 
-Open to Data Scientist & ML Engineer roles*
+*Author: Samira Khamidullova*
+*Open to Data Scientist & ML Engineer roles*
